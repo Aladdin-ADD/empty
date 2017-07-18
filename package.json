@@ -1,0 +1,28 @@
+{
+    "name": "nodejs-starter",
+    "version": "0.0.0",
+    "author": "薛定谔的猫 <hh_2013@foxmail.com>",
+    "description": "",
+    "main": "./lib/index.js",
+    "scripts": {
+        "lint": "eslint lib tests",
+        "lint:fix": "eslint --fix lib tests",
+        "test": "_mocha --recursive tests",
+        "pretest": "npm run lint"
+    },
+    "files": [],
+    "dependencies": {},
+    "devDependencies": {
+        "eslint": "^4.2.0",
+        "eslint-config-eslint": "^4.0.0",
+        "espree": "^3.4.3",
+        "mocha": "^3.4.2"
+    },
+    "keywords": [
+        "Node.js"
+    ],
+    "license": "MIT",
+    "engines": {
+        "node": ">=4"
+    }
+}
