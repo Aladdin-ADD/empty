@@ -5,7 +5,8 @@
     "description": "",
     "main": "./app/index.js",
     "scripts": {
-        "build": "webpack",
+        "dev": "webpack-dev-server --env development",
+        "build": "webpack --env production",
         "lint": "eslint lib tests",
         "lint:fix": "eslint --fix app tests",
         "test": "_mocha --recursive tests",
