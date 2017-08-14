@@ -1,4 +1,5 @@
 const path = require("path");
+const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const PATHS = {
@@ -18,9 +19,38 @@ const commonConfig = {
         path: PATHS.build,
         filename: "[name].js"
     },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                enforce: "pre",
+                loader: "eslint-loader",
+                options: { emitWarning: true }
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             title: "Webpack demo"
+        }),
+        new webpack.LoaderOptionsPlugin({
+            options: {
+                eslint: {
+
+                    // Fail only on errors
+                    failOnWarning: false,
+                    failOnError: true,
+
+                    // Toggle autofix
+                    fix: false,
+
+                    // Output to Jenkins compatible XML
+                    outputReport: {
+                        filePath: "checkstyle.xml",
+                        formatter: require("eslint/lib/formatters/checkstyle")
+                    }
+                }
+            }
         })
     ],
     bail: true
