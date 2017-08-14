@@ -18,7 +18,8 @@
         "eslint-config-eslint": "^4.0.0",
         "html-webpack-plugin": "^2.30.1",
         "mocha": "^3.4.2",
-        "webpack": "^3.5.4"
+        "webpack": "^3.5.4",
+        "webpack-dev-server": "^2.7.1"
     },
     "keywords": [
         "Node.js"
