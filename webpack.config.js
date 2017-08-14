@@ -22,5 +22,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: "Webpack demo"
         })
-    ]
+    ],
+    bail: true
 };
