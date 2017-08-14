@@ -1,5 +1,7 @@
+"use strict";
+
 const assert = require("assert");
-const add = require("../../lib/index.js");
+const add = require("../../app/index.js");
 
 describe("add", () => {
 

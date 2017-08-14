@@ -3,10 +3,10 @@
     "version": "0.0.0",
     "author": "薛定谔的猫 <hh_2013@foxmail.com>",
     "description": "",
-    "main": "./lib/index.js",
+    "main": "./app/index.js",
     "scripts": {
         "lint": "eslint lib tests",
-        "lint:fix": "eslint --fix lib tests",
+        "lint:fix": "eslint --fix app tests",
         "test": "_mocha --recursive tests",
         "pretest": "npm run lint"
     },
