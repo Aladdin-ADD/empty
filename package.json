@@ -6,7 +6,7 @@
     "main": "./app/index.js",
     "scripts": {
         "dev": "webpack-dev-server --env development",
-        "build": "webpack --env production",
+        "build": "webpack --env.target production",
         "lint": "eslint lib tests",
         "lint:fix": "eslint --fix app tests",
         "test": "_mocha --recursive tests",
