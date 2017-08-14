@@ -16,7 +16,8 @@
         "eslint": "^4.2.0",
         "eslint-config-eslint": "^4.0.0",
         "espree": "^3.4.3",
-        "mocha": "^3.4.2"
+        "mocha": "^3.4.2",
+        "webpack": "^3.5.4"
     },
     "keywords": [
         "Node.js"
