@@ -5,7 +5,7 @@
     "description": "",
     "main": "./app/index.js",
     "scripts": {
-        "dev": "webpack-dev-server --env development",
+        "dev": "SET PORT=3000 && webpack-dev-server --env development",
         "build": "webpack --env.target production",
         "lint": "eslint lib tests",
         "lint:fix": "eslint --fix app tests",
