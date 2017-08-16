@@ -6,7 +6,8 @@
   "main": "./app/index.js",
   "scripts": {
     "start": "nodemon --watch webpack.config.js --exec \"webpack-dev-server --env development\"",
-    "build": "webpack --env.target production",
+    "build": "webpack --env production",
+    "prebuild": "rm -rf build/*",
     "lint": "standard lib tests",
     "lint:fix": "standard --fix .",
     "test": "_mocha --recursive tests",
