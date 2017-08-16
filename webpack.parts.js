@@ -1,5 +1,6 @@
 const path = require('path')
 const webpack = require('webpack')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {
@@ -82,3 +83,28 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
     })
   ]
 })
+
+exports.extractCSS = ({ include, exclude, use }) => {
+  // Output extracted CSS to a file
+  const plugin = new ExtractTextPlugin({
+    filename: '[name].css'
+  })
+
+  return {
+    module: {
+      rules: [
+        {
+          test: /\.css$/,
+          include,
+          exclude,
+
+          use: plugin.extract({
+            use,
+            fallback: 'style-loader'
+          })
+        }
+      ]
+    },
+    plugins: [ plugin ]
+  }
+}
