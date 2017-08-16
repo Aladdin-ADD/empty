@@ -48,7 +48,9 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
             loader: 'postcss-loader',
             options: {
               plugins: () => ([
-                require('autoprefixer'),
+                require('postcss-cssnext')(),
+                // cssnext includes autoprefixer!
+                // require('autoprefixer'),
                 require('precss')
               ])
             }
