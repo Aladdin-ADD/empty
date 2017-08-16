@@ -76,7 +76,11 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-document.body.appendChild(Object(__WEBPACK_IMPORTED_MODULE_1__component__["a" /* default */])())
+const element = Object(__WEBPACK_IMPORTED_MODULE_1__component__["a" /* default */])()
+// Attach the generated class name
+element.className = __WEBPACK_IMPORTED_MODULE_0__main_css___default.a.redButton
+
+document.body.appendChild(element)
 
 
 /***/ }),

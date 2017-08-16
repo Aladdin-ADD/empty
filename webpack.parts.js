@@ -40,10 +40,18 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
         use: [
           'style-loader',
           {
-            loader: 'css-loader',
-            options: {modules: true}
+            loader: 'css-loader'
+            // options: {modules: true}
           }
         ]
+      },
+      {
+        test: /\.less$/,
+        use: ['style-loader', 'css-loader', 'less-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
       }
     ]
   }
