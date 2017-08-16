@@ -43,6 +43,15 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
           {
             loader: 'css-loader'
             // options: {modules: true}
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: () => ([
+                require('autoprefixer'),
+                require('precss')
+              ])
+            }
           }
         ]
       },
