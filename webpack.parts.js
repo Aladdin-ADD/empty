@@ -77,7 +77,7 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
       options: {
         // yeticss
         stylus: {
-          use: [require('yeticss')]
+          // use: [require('yeticss')]
         }
       }
     })
@@ -102,6 +102,10 @@ exports.extractCSS = ({ include, exclude, use }) => {
             use,
             fallback: 'style-loader'
           })
+        },
+        {
+          test: /\.styl$/i,
+          use: plugin.extract([ 'css-loader', 'stylus-loader' ])
         }
       ]
     },
