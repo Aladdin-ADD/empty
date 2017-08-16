@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 
 exports.devServer = ({ host, port } = {}) => ({
   devServer: {
@@ -52,7 +53,21 @@ exports.loadCSS = ({ include, exclude } = {}) => ({
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.styl$/,
+        use: ['style-loader', 'css-loader', 'stylus-loader']
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+        // yeticss
+        stylus: {
+          use: [require('yeticss')]
+        }
+      }
+    })
+  ]
 })

@@ -1,9 +1,8 @@
-import styles from './main.css'
+import './main.styl'
 
 import component from './component'
 
 const element = component()
-// Attach the generated class name
-element.className = styles.redButton
 
+element.className = 'redButton'
 document.body.appendChild(element)
