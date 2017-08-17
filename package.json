@@ -38,6 +38,7 @@
     "standard": "latest",
     "style-loader": "^0.18.2",
     "stylelint": "^8.0.0",
+    "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1",
