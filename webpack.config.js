@@ -39,6 +39,11 @@ const commonConfig = merge([
 ])
 
 const productionConfig = merge([
+  {
+    entry: {
+      vendor: ['react']
+    }
+  },
   parts.extractCSS({ use: 'css-loader' }),
 
   parts.purifyCSS({
