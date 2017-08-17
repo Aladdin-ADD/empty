@@ -22,7 +22,31 @@ const commonConfig = merge([
       new HtmlWebpackPlugin({
         title: 'Webpack demo'
       })
-    ]
+    ],
+    module: {
+      rules: [
+        {
+          // **Conditions**
+          // Match files against RegExp or a function.
+          test: /\.js$/,
+
+          // **Restrictions**
+          // Restrict matching to a directory. This
+          // also accepts an array of paths or a function.
+          // The same applies to `exclude`.
+          include: path.join(__dirname, 'app'),
+          exclude (path) {
+            // You can perform more complicated checks
+            // through functions if you want.
+            return path.match(/node_modules/)
+          },
+
+          // **Actions**
+          // Apply loaders the matched files.
+          use: 'babel-loader'
+        }
+      ]
+    }
   },
   parts.lintJavaScript({ include: PATHS.app })
 
