@@ -15,7 +15,9 @@
     "pretest": "npm run lint"
   },
   "files": [],
-  "dependencies": {},
+  "dependencies": {
+    "font-awesome": "^4.7.0"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "babel-core": "^6.26.0",
