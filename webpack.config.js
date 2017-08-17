@@ -44,6 +44,13 @@ const commonConfig = merge([
           // **Actions**
           // Apply loaders the matched files.
           use: 'babel-loader?cacheDirectory,presets[]=es2015'
+        },
+        {
+          test: /\.(jpg|png|svg)$/,
+          loader: 'url-loader',
+          options: {
+            limit: 25000
+          }
         }
       ]
     }
