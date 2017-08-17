@@ -10,13 +10,12 @@
     "prebuild": "rm -rf build/*",
     "lint": "standard lib tests",
     "lint:fix": "standard --fix .",
+    "lint:style": "stylelint app/**/*.css",
     "test": "_mocha --recursive tests",
     "pretest": "npm run lint"
   },
   "files": [],
-  "dependencies": {
-    "purecss": "^1.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "css-loader": "^0.28.4",
@@ -31,12 +30,12 @@
     "postcss-cssnext": "^3.0.2",
     "postcss-loader": "^2.0.6",
     "precss": "^2.0.0",
-    "purecss": "^1.0.0",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
     "sass-loader": "^6.0.6",
     "standard": "latest",
     "style-loader": "^0.18.2",
+    "stylelint": "^8.0.0",
     "stylus-loader": "^3.0.1",
     "webpack": "^3.5.4",
     "webpack-dev-server": "^2.7.1",
