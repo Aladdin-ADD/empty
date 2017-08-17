@@ -43,7 +43,7 @@ const commonConfig = merge([
 
           // **Actions**
           // Apply loaders the matched files.
-          use: 'babel-loader'
+          use: 'babel-loader?cacheDirectory,presets[]=es2015'
         }
       ]
     }
