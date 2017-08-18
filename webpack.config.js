@@ -43,13 +43,13 @@ const productionConfig = merge([
   {
     entry: {
       vendor: ['react']
-    },
+    }
 
-    plugins: [
-      new webpack.optimize.CommonsChunkPlugin({
-        name: 'vendor'
-      })
-    ]
+    // plugins: [
+    //   new webpack.optimize.CommonsChunkPlugin({
+    //     name: 'vendor'
+    //   })
+    // ]
   },
   parts.extractCSS({ use: 'css-loader' }),
 
@@ -62,7 +62,13 @@ const productionConfig = merge([
       limit: 15000,
       name: '[name].[ext]'
     }
-  })
+  }),
+
+  parts.extractBundles([
+    {
+      name: 'vendor'
+    }
+  ])
 ])
 
 const developmentConfig = merge([
