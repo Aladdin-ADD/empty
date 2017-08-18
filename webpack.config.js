@@ -75,7 +75,10 @@ const productionConfig = merge([
         resource.match(/\.js$/)
       )
     }
-  ])
+  ]),
+
+  parts.attachRevision()
+
 ])
 
 const developmentConfig = merge([
