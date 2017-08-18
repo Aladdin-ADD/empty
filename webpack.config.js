@@ -40,6 +40,8 @@ const commonConfig = merge([
 ])
 
 const productionConfig = merge([
+  parts.clean(PATHS.build),
+
   {
     // entry: {
     //   vendor: ['react']
