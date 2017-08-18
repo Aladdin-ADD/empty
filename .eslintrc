@@ -1,3 +1,4 @@
 {
-    "extends": "standard/eslintrc.json"
+    "extends": "standard/eslintrc.json",
+    "parser": "babel-eslint"
 }
