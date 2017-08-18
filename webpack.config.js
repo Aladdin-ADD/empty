@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const merge = require('webpack-merge')
 const glob = require('glob')
 const parts = require('./webpack.parts')
+const webpack = require('webpack')
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
@@ -42,7 +43,13 @@ const productionConfig = merge([
   {
     entry: {
       vendor: ['react']
-    }
+    },
+
+    plugins: [
+      new webpack.optimize.CommonsChunkPlugin({
+        name: 'vendor'
+      })
+    ]
   },
   parts.extractCSS({ use: 'css-loader' }),
 
