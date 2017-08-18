@@ -41,9 +41,9 @@ const commonConfig = merge([
 
 const productionConfig = merge([
   {
-    entry: {
-      vendor: ['react']
-    }
+    // entry: {
+    //   vendor: ['react']
+    // }
 
     // plugins: [
     //   new webpack.optimize.CommonsChunkPlugin({
@@ -66,7 +66,12 @@ const productionConfig = merge([
 
   parts.extractBundles([
     {
-      name: 'vendor'
+      name: 'vendor',
+      minChunks: ({ resource }) => (
+        resource &&
+        resource.indexOf('node_modules') >= 0 &&
+        resource.match(/\.js$/)
+      )
     }
   ])
 ])
