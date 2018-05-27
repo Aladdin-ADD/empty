@@ -15,6 +15,8 @@
 
 # node
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tplss/node.svg)](https://greenkeeper.io/)
+
 > a Node.js boilerplate repo, with some useful deps.
 
 ## Usage
