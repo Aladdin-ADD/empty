@@ -1,7 +1,8 @@
 {
   "name": "@tplss/node",
+  "private": true,
   "version": "0.0.0",
-  "author": "薛定谔的猫 <hh_2013@foxmail.com>",
+  "author": "唯然 <weiran.zsd@alibaba-inc.com>",
   "description": "Node.js boilerplate",
   "main": "./lib/index.js",
   "scripts": {
@@ -21,8 +22,7 @@
     "mocha": "^6.1.4"
   },
   "keywords": [
-    "Node.js",
-    "boilerplate"
+    "Node.js"
   ],
   "eslintConfig": {
     "extends": [
@@ -47,5 +47,12 @@
   "license": "MIT",
   "engines": {
     "node": ">=8"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npm.alibaba-inc.com"
+  },
+  "tnpm": {
+    "mode": "npm",
+    "lockfile": "disable"
   }
 }

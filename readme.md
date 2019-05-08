@@ -9,20 +9,11 @@
   </a>
 </p>
 
-# node
-
-> a Node.js boilerplate repo, with some useful deps.
+# node repo
 
 ## Usage
 
 ```bash
-$ npm install -g degit
-$ degit tplss/node
+$ npx degit tplss/node
 ```
 
-## Features
-
-+ eslint (eslint-config-ts)
-+ husky
-+ mocha
-+ MIT license
